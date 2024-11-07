@@ -1,38 +1,74 @@
 .App {
   text-align: center;
+  padding: 20px;
+  display: flex; /* Use Flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+  z-index: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  margin-top: 20px;  /*Adjust the space above the heading */
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-link {
+  margin-right: 20px; /* Adjust the distance as needed */
+  text-decoration: none;
+  color: #000; /* Optional: change color if desired */
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-links {
+  position: sticky;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 20px; /* Adjust the spacing */
+}
+nav {
+  position: fixed;
+  top: 0;
+  /* z-index: 10; */
+  left: 0;
+  width: 100%; /* Make the nav take full width */
+  background-color: #fff; /* Optional: add a background color */
+  z-index: 1000; /* Optional: ensure it stays on top */
+  padding: 10px; /* Optional: padding for spacing */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: shadow effect */
+}
+.search-bar {
+  margin-top: 40px; /* Push the search bar lower */
+  padding: 10px;
+  width: 50%;
+  max-width: 400px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  align-self: flex-end; /* Align search bar to the right corner */
+}
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 3 tiles per row */
+  grid-gap: 20px; /* Space between tiles */
+  padding: 20px;
+  justify-items: center; /* Centers tiles horizontally */
+  margin-top: 80px;  /* Add space between the heading and the tiles */
+}
+
+.movie-tile {
+  background-color: #282c34;
   color: white;
+  width: 1500px;   /* Fixed width for the tiles */
+  height: 1700px;  /* Fixed height for the tiles */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.App-link {
-  color: #61dafb;
+.movie-tile:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movie-tile h2 {
+  font-size: 1rem;
+  padding: 10px;
+  text-align: center;
 }

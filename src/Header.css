@@ -1,0 +1,15 @@
+.header {
+    position: absolute; /* Positions the header relative to the nearest positioned ancestor or the browser window */
+    top: 0;             /* Aligns the header to the top of the screen */
+    left: 50%;          /* Centers the header horizontally */
+    transform: translateX(-50%); /* Adjust the position back to fully center the header */
+    
+    width: 80%;         /* Optional: Set the width of the header */
+    padding: 1rem;      /* Adds padding inside the header */
+    
+    text-align: center; /* Centers the text within the header */
+    border: 2px solid black; /* Adds a black border around the header */
+    background-color: #f0f0f0; /* Optional: Background color */
+    color: blue;
+  }
+  
